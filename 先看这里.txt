@@ -1,0 +1,45 @@
+Minimal 黑色白边阴影鼠标 · 最终确认版
+
+一、在另一台 Mac 使用
+1. 将整个 Minimal-Black80-Mac-Package.zip 传到另一台 Mac，用 Finder 解压。
+2. 打开解压出的文件夹，双击“一键安装鼠标.command”。脚本会检查文件、复制工具和主题，并立即应用，无需输入命令或管理员密码。
+3. 看到成功提示后移动鼠标查看效果，按回车关闭窗口。
+4. 保留完整便携包，以便注销或重启后需要时再次应用。
+
+二、版本内容
+黑色主体、白色描边、柔和阴影；普通箭头 80%，稍微收尖但不锋利，白边较原版减薄约 25%；链接手型为短食指；其他指针 75%。
+本包已于 2026-10-31 按确认的预览更新普通箭头：细白边、直边小圆角尖端（含 ArrowS 别名及全部分辨率），点击热点随新尖端调整；其他指针不变。系统应用结果以安装脚本输出和实际显示为准。
+主题文件名仍带 75，表示其他指针的基础比例；普通箭头实际为 80%。
+Themes/全套预览.png 中的红点仅标记热点，真实指针没有红点。
+没有混入旧白色版、90% 箭头版或未确认的候选版。
+
+三、兼容性与系统安全
+仅供 Mac 使用，不适用于 Windows。
+Apple 芯片 + macOS 27 或更新：使用本地编译的原生 arm64 工具。
+Apple 芯片 + 较旧 macOS：使用 Intel 工具，需要已安装 Rosetta；本脚本不会安装 Rosetta。
+Intel Mac：使用 Intel 工具。
+仅在原 Mac（Apple 芯片、macOS 27.0.1）验证过该主题和原生工具；不能保证其他系统或所有应用兼容。部分应用自带指针可能不受影响。
+本包未获 Apple 公证。若系统拦截，只在确认来源可信后，按系统“隐私与安全性”提供的允许方式操作；不要关闭 Gatekeeper 或 SIP，不要批量移除隔离属性。
+如果命令脚本被拦截或工具不兼容，先查看窗口中的实际错误，不要用 sudo 强行执行。
+
+四、脚本会改变什么
+在 ~/Library/Application Support/MinimalBlack80 中保存所选命令行工具。
+在 ~/Library/Application Support/Mousecape/capes 中保存 local.minimal.cursor.softblack75.cape，并通过 Mousecape 的用户偏好选择它。
+发现同名主题或工具时，先备份到 MinimalBlack80/before-install.*。
+不安装 GUI 应用、不下载文件、不安装 Rosetta、不需要 sudo、不添加或更改登录项，也不会启动自动监听。
+Mousecape 使用私有 macOS API；注销或重启后可能需要再次应用。
+SHA256SUMS.txt 用于检查传输损坏，不是可信签名或公证。
+
+五、可选图形界面与恢复
+Software/Mousecape_1813.zip 是官方 Mousecape GUI 原始发布包，已一起附带。
+需要 GUI 时自行解压并打开 Mousecape.app，导入 Themes/Minimal-Soft-Black-75.cape，再选择 Apply。
+官方 GUI 为 Intel 版，Apple 芯片上可能需要 Rosetta；一键脚本本身不要求先安装 GUI。
+恢复系统指针可使用 Mousecape 的恢复默认功能；现代系统别名的恢复效果未全面验证。
+本包没有添加登录项，但 GUI 自身设置可能另行开启后台功能，请自行检查。
+
+六、来源与许可
+项目：https://github.com/alexzielenski/Mousecape
+官方发布：https://github.com/alexzielenski/Mousecape/releases/tag/1813
+原始下载：https://github.com/alexzielenski/Mousecape/releases/download/1813/Mousecape_1813.zip
+arm64 工具由该项目源码本地编译，最低 macOS 27.0；Intel 工具取自官方发布包。
+Mousecape 仅限个人非商业用途，完整版权、条件和免责声明见 Mousecape-LICENSE.txt。
